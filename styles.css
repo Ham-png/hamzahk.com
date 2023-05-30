@@ -26,7 +26,7 @@ body {
   font-size: 18px;
   margin-top: 50px;
   margin-left: 20px;
-  text-align: center;
+  text-align: left;
   max-width: 600px; 
 }
 
@@ -54,6 +54,11 @@ body {
   object-fit: cover;
   border: 1px solid #000000;
   margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.headshot:hover {
+  transform: scale(1.19);
 }
 
 .name {
