@@ -211,5 +211,5 @@ h3 {
 }
 
 .title:hover {
-  color: #ff5722;
+  transform: scale(1.2);
 }

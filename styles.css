@@ -78,6 +78,7 @@ body {
   padding-bottom: 10px;
 }
 
+
 .logos a {
   margin: 0 5px;
 }
@@ -85,4 +86,9 @@ body {
 .logos img {
   width: 30px;
   height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logos img:hover {
+  transform: scale(1.2);
 }
