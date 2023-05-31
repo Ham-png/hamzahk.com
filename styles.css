@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  'Arial', sans-serif;
   background-color: #ffffff;
   display: flex;
   align-items: flex-start; 
@@ -26,10 +26,19 @@ body {
 .description {
   font-weight: 300;
   font-size: 18px;
-  margin-top: 50px;
   margin-left: 20px;
   text-align: left;
-  max-width: 600px; 
+  max-width: 630px; 
+}
+
+.description img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden; 
 }
 
 .education {
@@ -191,3 +200,14 @@ and my friend Erik https://github.com/eduxstad/duxstad.com/blob/master/index.css
   transition-delay: 0.00s;
 }
 
+.header {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.header h2 {
+  font-size: medium;
+  font-weight: 550;
+  display: inline-block;
+  margin-bottom: 0; 
+}
