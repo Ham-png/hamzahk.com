@@ -41,6 +41,93 @@ body {
   overflow: hidden; 
 }
 
+* {box-sizing:border-box}
+
+/* Code adopted from https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
+.slideshow-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot-container {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 .education {
   font-size: 16px;
   font-weight: 300;
@@ -208,6 +295,18 @@ and my friend Erik https://github.com/eduxstad/duxstad.com/blob/master/index.css
 .header h2 {
   font-size: medium;
   font-weight: 550;
+  display: inline-block;
+  margin-bottom: 0; 
+}
+
+.header2 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.header2 h2 {
+  font-size: medium;
+  font-weight: 350;
   display: inline-block;
   margin-bottom: 0; 
 }
