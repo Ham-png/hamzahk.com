@@ -1,30 +1,43 @@
-// Code copied from https://www.w3schools.com/howto/howto_js_slideshow.asp
+// Code modified from https://www.w3schools.com/howto/howto_js_slideshow.asp
+let slideIndex = [1, 1];
 
-let slideIndex = 1;
-showSlides(slideIndex);
+setTimeout(function() {
+  showSlides(1, 1);
+}, 20);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+setTimeout(function() {
+  showSlides(1, 2);
+}, 20);
+
+function plusSlides(n, slideshowIndex) {
+  showSlides((slideIndex[slideshowIndex - 1] += n), slideshowIndex);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, slideshowIndex) {
+  showSlides((slideIndex[slideshowIndex - 1] = n), slideshowIndex);
 }
 
-function showSlides(n) {
+function showSlides(n, slideshowIndex) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  let slides = document.getElementById(`slideshow${slideshowIndex}`).getElementsByClassName(`mySlides`);
+  let dots = document.getElementById(`slideshow${slideshowIndex}`).getElementsByClassName(`dot`);
+
+  if (n > slides.length) {
+    slideIndex[slideshowIndex - 1] = 1;
+  }
+
+  if (n < 1) {
+    slideIndex[slideshowIndex - 1] = slides.length;
+  }
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  slides[slideIndex[slideshowIndex - 1] - 1].style.display = "block";
+  dots[slideIndex[slideshowIndex - 1] - 1].className += " active";
 }
