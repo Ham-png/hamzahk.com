@@ -1,5 +1,5 @@
 // Code modified from https://www.w3schools.com/howto/howto_js_slideshow.asp
-let slideIndex = [1, 1];
+let slideIndex = [1, 1, 1]; // Array to hold the slide index for three slideshows
 
 setTimeout(function() {
   showSlides(1, 1);
@@ -7,6 +7,10 @@ setTimeout(function() {
 
 setTimeout(function() {
   showSlides(1, 2);
+}, 20);
+
+setTimeout(function() {
+  showSlides(1, 3);
 }, 20);
 
 function plusSlides(n, slideshowIndex) {
