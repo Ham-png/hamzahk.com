@@ -75,6 +75,19 @@
             </div>
 
             <p class="description scroll">
+                I had the opportunity to modify a CPU model called MinorCPU in <a href="https://www.gem5.org/" class="link-effect">Gem5</a> 
+                during my Fall 2024 semester. I worked on implementing Load Value Prediction (LVP) into the MinorCPU model, 
+                a microarchitecture technique that predicts the data value of a load instruction to mitigate memory access latencies. 
+                The implementation included developing a Load Value Prediction Table (LVPT), 
+                an associative memory that stores load addresses and their predicted values, 
+                and a Constant Verification Unit (CVU), responsible for validating the accuracy of the predicted values. 
+                We tested the system by simulating workloads with 20 billion instructions under various load latencies 
+                to evaluate its effectiveness in improving execution efficiency.
+                <img src="Pictures/Pipeline.png">
+                <hr>
+            </p>
+
+            <p class="description scroll">
                 During my second semester as a master's student, I worked on evaluating YOLO-based image processing algorithms to detect and label brain tumors, 
                 focusing on improving detection accuracy and processing speed. By leveraging the <a href="https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection" class="link-effect">Br35H dataset</a>, 
                 I conducted a comparative analysis against baseline YOLO versions like YOLOv6 and YOLOv7, 
